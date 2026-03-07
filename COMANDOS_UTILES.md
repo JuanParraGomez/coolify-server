@@ -14,6 +14,8 @@ ssh hostinger-vps 'free -h && df -h / /opt'
 ssh hostinger-vps 'docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | egrep "ui-platform-coolify|NAMES"'
 ssh hostinger-vps 'curl -fsS http://127.0.0.1:18000/api/health'
 ssh hostinger-vps 'docker logs --tail=100 ui-platform-coolify'
+ssh hostinger-vps 'curl -k --resolve projects.uniflexia.cloud:443:127.0.0.1 -I https://projects.uniflexia.cloud/login'
+ssh hostinger-vps 'curl -k --resolve projects.uniflexa.cloud:443:127.0.0.1 -I https://projects.uniflexa.cloud/login'
 ```
 
 ## Compose control
@@ -34,3 +36,9 @@ ssh hostinger-vps 'sudo cat /opt/ui-platform/docs/API_BOOTSTRAP_TOKEN.txt'
 ssh hostinger-vps 'TOKEN=$(cat /opt/ui-platform/docs/API_BOOTSTRAP_TOKEN.txt); curl -sS -H "Authorization: Bearer $TOKEN" http://127.0.0.1:18000/api/v1/projects'
 ssh hostinger-vps 'TOKEN=$(cat /opt/ui-platform/docs/API_BOOTSTRAP_TOKEN.txt); curl -sS -H "Authorization: Bearer $TOKEN" http://127.0.0.1:18000/api/v1/servers'
 ```
+
+## Git y actualización automática
+- Este repo versiona la infraestructura y la documentación de `ui-platform`.
+- El panel base de Coolify no se reconstruye automáticamente desde GitHub.
+- El auto-deploy desde Git aplica a las apps registradas dentro de Coolify cuando conectes cada repo GitHub/GitLab.
+- Si Hostinger va a “estar pendiente de GitHub”, eso sirve para tus apps o para una pipeline aparte, no para recrear el control plane de Coolify.

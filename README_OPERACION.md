@@ -5,6 +5,9 @@
 - Coolify instalado en modo aislado.
 - Stack actual preservado.
 - Coolify control plane levantado en `http://72.61.2.9:18000`.
+- Ruta de administración preparada detrás del `traefik` actual:
+  - `https://projects.uniflexia.cloud/login`
+  - `https://projects.uniflexa.cloud/login`
 - Soketi aislado en `16001` y `16002`.
 - Red dedicada: `ui_platform_coolify`.
 - Raíz operativa: `/opt/ui-platform`.
@@ -68,6 +71,9 @@ Todos quedaron root-only (`600`).
 ## Health y validación
 - API health interno Coolify: `GET /api/health`
 - URL temporal control plane: `http://72.61.2.9:18000`
+- URL objetivo de administración:
+  - `https://projects.uniflexia.cloud/login`
+  - `https://projects.uniflexa.cloud/login`
 - Registro inicial ya completado.
 - API de Coolify habilitada.
 - VPS registrado como servidor manejado dentro de Coolify.
@@ -93,3 +99,4 @@ Respaldar:
 2. Restaurar volúmenes `ui-platform-coolify-db` y `ui-platform-coolify-redis`.
 3. Levantar compose desde `/opt/ui-platform/coolify/source`.
 4. Verificar acceso a `http://72.61.2.9:18000`.
+5. Si el DNS ya apunta al VPS, verificar `https://projects.uniflexia.cloud/login` o `https://projects.uniflexa.cloud/login`.

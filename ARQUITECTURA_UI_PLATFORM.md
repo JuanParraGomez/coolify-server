@@ -14,7 +14,9 @@ Plataforma separada para publicación de UIs generadas por IA, preparada para cr
 - Runtime base: Docker / Docker Compose en VPS existente
 - Red dedicada: `ui_platform_coolify`
 - Exposición temporal actual:
-  - `http://72.61.2.9:18000` control plane
+  - `http://72.61.2.9:18000` control plane directo
+  - `https://projects.uniflexia.cloud/login` administración por proxy
+  - `https://projects.uniflexa.cloud/login` administración por proxy
   - puertos altos para demos puntuales
 
 ## Arquitectura fase 2 preparada
@@ -35,6 +37,7 @@ Plataforma separada para publicación de UIs generadas por IA, preparada para cr
 Eso implica:
 - Coolify sí puede funcionar como panel de control aislado.
 - Coolify no debe tomar el proxy público por defecto sin mover o integrar el `traefik` actual.
+- El panel admin ya quedó enganchado al `traefik` actual por un host dedicado.
 - La estrategia de wildcard subdomain queda preparada pero no activada aún para no romper nada.
 
 ## Estrategia recomendada para activar subdominios después

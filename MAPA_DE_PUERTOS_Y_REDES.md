@@ -17,6 +17,7 @@
 
 ## Red Docker dedicada
 - `ui_platform_coolify`
+- `proxy` compartida solo para publicar el panel admin en el `traefik` existente
 
 ## Contenedores ui-platform
 - `ui-platform-coolify`
@@ -27,4 +28,7 @@
 ## Conflicto relevante
 - el proxy público actual del VPS está en `80/443`
 - por eso el ui-platform quedó deliberadamente fuera de esos puertos
-- cualquier despliegue público real por subdominio necesita una fase 2 de integración o una IP/VPS dedicado
+- el panel admin ya quedó integrado por host dedicado:
+  - `projects.uniflexia.cloud`
+  - `projects.uniflexa.cloud`
+- cualquier despliegue público real de apps por wildcard todavía necesita una fase 2 o una IP/VPS dedicado

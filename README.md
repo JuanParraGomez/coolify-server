@@ -7,6 +7,7 @@ Este repo documenta y automatiza la fase 1 de `ui-platform`:
 - instalación aislada de Coolify
 - estrategia de subdominios
 - puertos y redes dedicadas
+- subdominio de administración preparado en el proxy actual
 - bootstrap para despliegues demo
 - preparación para fase 2 (`ui-orchestrator`, `app-registry`, `template-registry`, `rag-ingestion-worker`, `data-connectors`)
 
