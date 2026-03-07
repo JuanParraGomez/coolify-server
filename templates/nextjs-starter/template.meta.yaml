@@ -1,0 +1,5 @@
+slug: nextjs-starter
+app_type: nextjs
+deployment_provider: coolify
+recommended_for:
+  - long_lived

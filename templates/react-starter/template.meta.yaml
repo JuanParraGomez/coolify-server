@@ -1,0 +1,5 @@
+slug: react-starter
+app_type: react
+deployment_provider: coolify
+recommended_for:
+  - long_lived

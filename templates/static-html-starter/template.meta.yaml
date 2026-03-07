@@ -1,0 +1,6 @@
+slug: static-html-starter
+app_type: static_html
+deployment_provider: docker
+recommended_for:
+  - short_lived
+  - long_lived
