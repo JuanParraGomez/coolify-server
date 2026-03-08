@@ -14,6 +14,7 @@ ssh hostinger-vps 'free -h && df -h / /opt'
 ssh hostinger-vps 'docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | egrep "ui-platform-coolify|NAMES"'
 ssh hostinger-vps 'curl -fsS http://127.0.0.1:18000/api/health'
 ssh hostinger-vps 'docker logs --tail=100 ui-platform-coolify'
+ssh hostinger-vps 'curl -k --resolve botmanager.uniflexa.cloud:443:127.0.0.1 -I https://botmanager.uniflexa.cloud/login'
 ssh hostinger-vps 'curl -k --resolve projects.uniflexa.cloud:443:127.0.0.1 -I https://projects.uniflexa.cloud/login'
 ```
 

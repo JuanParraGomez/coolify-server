@@ -6,6 +6,7 @@
 - Stack actual preservado.
 - Coolify control plane levantado en `http://72.61.2.9:18000`.
 - Ruta de administración preparada detrás del `traefik` actual:
+  - `https://botmanager.uniflexa.cloud/login`
   - `https://projects.uniflexa.cloud/login`
 - Soketi aislado en `16001` y `16002`.
 - Red dedicada: `ui_platform_coolify`.
@@ -71,6 +72,7 @@ Todos quedaron root-only (`600`).
 - API health interno Coolify: `GET /api/health`
 - URL temporal control plane: `http://72.61.2.9:18000`
 - URL objetivo de administración:
+  - `https://botmanager.uniflexa.cloud/login`
   - `https://projects.uniflexa.cloud/login`
 - Observación de enrutamiento:
   - se probó `https://uniflexa.cloud/projects`
@@ -101,4 +103,4 @@ Respaldar:
 2. Restaurar volúmenes `ui-platform-coolify-db` y `ui-platform-coolify-redis`.
 3. Levantar compose desde `/opt/ui-platform/coolify/source`.
 4. Verificar acceso a `http://72.61.2.9:18000`.
-5. Si el DNS ya apunta al VPS, verificar `https://projects.uniflexa.cloud/login`.
+5. Si el DNS ya apunta al VPS, verificar `https://botmanager.uniflexa.cloud/login`.

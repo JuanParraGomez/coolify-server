@@ -22,6 +22,7 @@ Si se usa proxy/CDN:
 
 ## Estado actual
 - El panel administrativo quedó preparado detrás del proxy actual en:
+  - `https://botmanager.uniflexa.cloud/login`
   - `https://projects.uniflexa.cloud/login`
 - La validación interna por `Host` forzado ya responde correctamente en el VPS.
 - El wildcard para apps publicadas por Coolify sigue pendiente.
@@ -40,6 +41,7 @@ Motivo:
 
 ## Registros DNS exactos recomendados
 Admin:
+- `A botmanager.uniflexa.cloud -> 72.61.2.9`
 - `A projects.uniflexa.cloud -> 72.61.2.9`
 
 Apps futuras:

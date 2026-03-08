@@ -15,6 +15,7 @@ Plataforma separada para publicación de UIs generadas por IA, preparada para cr
 - Red dedicada: `ui_platform_coolify`
 - Exposición temporal actual:
   - `http://72.61.2.9:18000` control plane directo
+- `https://botmanager.uniflexa.cloud/login` administración por proxy
 - `https://projects.uniflexa.cloud/login` administración por proxy
   - puertos altos para demos puntuales
 
