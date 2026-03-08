@@ -1,6 +1,6 @@
-provider: docker
+provider: coolify
 repo: coolify-server
-base_directory: sandboxes/sales-ui-db349939-mcp
+base_directory: /sandboxes/sales-ui-db349939-mcp
 app_type: static_html
 autodeploy: false
 exposed: true

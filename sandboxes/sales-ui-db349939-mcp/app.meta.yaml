@@ -8,7 +8,7 @@ template: static-html-starter
 app_type: static_html
 repo_root: coolify-server
 project_root: sandboxes/sales-ui-db349939-mcp
-deployment_provider: docker
+deployment_provider: coolify
 coolify_project: null
 coolify_application: null
 domain: sales-ui-db349939-mcp.sandbox.uniflexa.cloud

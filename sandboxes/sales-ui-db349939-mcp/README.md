@@ -8,7 +8,7 @@ crea una app para ver ventas por region con filtros y graficos
 - project_type: `short_lived`
 - template: `static-html-starter`
 - project_root: `sandboxes/sales-ui-db349939-mcp`
-- deployment_provider: `docker`
+- deployment_provider: `coolify`
 - domain: `sales-ui-db349939-mcp.sandbox.uniflexa.cloud`
 
 ## How It Should Be Managed
