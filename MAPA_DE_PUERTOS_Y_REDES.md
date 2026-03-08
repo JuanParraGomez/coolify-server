@@ -29,6 +29,5 @@
 - el proxy público actual del VPS está en `80/443`
 - por eso el ui-platform quedó deliberadamente fuera de esos puertos
 - el panel admin ya quedó integrado por host dedicado:
-  - `projects.uniflexia.cloud`
   - `projects.uniflexa.cloud`
 - cualquier despliegue público real de apps por wildcard todavía necesita una fase 2 o una IP/VPS dedicado
