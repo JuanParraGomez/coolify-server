@@ -1,0 +1,26 @@
+project_id: prj_9f570ca636bf
+slug: crea-una-app-para-ver-ventas-por-region-con-filtros-graficos-tabla-drill-down-por-region-navegacion-y-datos-simulados-en-nextjs
+name: Crea Una App Para Ver Ventas Por Region Con Filtros Graficos Tabla Drill Down
+  Por Region Navegacion Y Datos Simulados En Nextjs
+description: crea una app para ver ventas por region con filtros, graficos, tabla,
+  drill-down por region, navegacion y datos simulados en Next.js
+project_type: long_lived
+status: active
+template: nextjs-starter
+app_type: nextjs
+repo_root: coolify-server
+project_root: apps/crea-una-app-para-ver-ventas-por-region-con-filtros-graficos-tabla-drill-down-por-region-navegacion-y-datos-simulados-en-nextjs
+deployment_provider: coolify
+coolify_project: ui-factory-prod
+coolify_application: crea-una-app-para-ver-ventas-por-region-con-filtros-graficos-tabla-drill-down-por-region-navegacion-y-datos-simulados-en-nextjs
+domain: crea-una-app-para-ver-ventas-por-region-con-filtros-graficos-tabla-drill-down-por-region-navegacion-y-datos-simulados-en-nextjs.apps.uniflexa.cloud
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T05:00:14.868061+00:00'
+updated_at: '2026-03-08T05:14:38+00:00'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: Dashboard UI de ventas regionales con filtros, graficas SVG, tabla operativa, navegacion y drill-down usando datos simulados.

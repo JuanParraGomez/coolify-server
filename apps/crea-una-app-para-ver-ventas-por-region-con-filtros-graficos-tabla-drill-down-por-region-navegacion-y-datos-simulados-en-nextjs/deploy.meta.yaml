@@ -1,0 +1,7 @@
+provider: coolify
+repo: coolify-server
+base_directory: /apps/crea-una-app-para-ver-ventas-por-region-con-filtros-graficos-tabla-drill-down-por-region-navegacion-y-datos-simulados-en-nextjs
+app_type: nextjs
+autodeploy: true
+exposed: true
+environment_profile: production
