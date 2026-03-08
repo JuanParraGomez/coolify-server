@@ -179,6 +179,11 @@ select {
   gap: 16px;
 }
 
+.filters-panel {
+  display: grid;
+  gap: 16px;
+}
+
 .control-group {
   display: grid;
   gap: 8px;
@@ -486,6 +491,10 @@ select {
   border-collapse: collapse;
 }
 
+.data-table.region-table {
+  min-width: 860px;
+}
+
 .data-table th,
 .data-table td {
   padding: 14px 0;
@@ -502,6 +511,36 @@ select {
 
 .data-table tr:last-child td {
   border-bottom: 0;
+}
+
+.data-table.region-table tbody tr {
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.data-table.region-table tbody tr:hover {
+  background: rgba(23, 49, 63, 0.04);
+}
+
+.data-table.region-table tbody tr.row-selected {
+  background: rgba(45, 143, 133, 0.08);
+}
+
+.data-table.region-table tbody tr.row-selected td:first-child {
+  box-shadow: inset 4px 0 0 var(--row-accent);
+}
+
+.region-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.region-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .text-positive {

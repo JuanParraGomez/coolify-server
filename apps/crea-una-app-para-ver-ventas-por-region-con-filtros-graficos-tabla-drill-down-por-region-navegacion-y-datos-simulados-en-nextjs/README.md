@@ -17,20 +17,24 @@ crea una app para ver ventas por region con filtros, graficos, tabla, drill-down
 - Keep `app.meta.yaml` and `deploy.meta.yaml` aligned with this file.
 
 ## Implemented UI
-- Executive sales dashboard focused on regional performance.
-- Live filters for period, channel and performance health.
+- Application shell with persistent navigation rail and responsive content frame.
+- Shared live filters for period, channel and performance health.
 - KPI summary cards for revenue, margin, orders and pipeline.
-- Regional navigation cards that drive drill-down state.
 - SVG charts for regional comparison and selected-region trend.
-- Operational table by subregion with deltas, conversion and pipeline.
-- Regional drill-down with channel mix, key accounts, alerts and actions.
-- Simulated data embedded in the UI so the project works without external APIs.
+- Interactive regional table synchronized with cards, charts and drill-down.
+- Regional drill-down with channel mix, key accounts, alerts and tactical notes.
+- Simulated data centralized in a shared module so the app works without external APIs.
 
 ## Architecture
 - `app/layout.tsx`: root layout and page metadata.
-- `app/page.tsx`: app entrypoint.
+- `app/page.tsx`: app entrypoint that mounts the shell and dashboard.
 - `app/globals.css`: global styling and responsive layout.
-- `components/sales-dashboard.tsx`: client-side dashboard logic, filters and data visualizations.
+- `components/dashboard-shell.tsx`: outer shell, rail navigation and application frame.
+- `components/sales-dashboard.tsx`: client-side dashboard orchestration and shared state.
+- `components/filters-panel.tsx`: reusable controls for period, channel and health filters.
+- `components/region-chart.tsx`: summary cards, charts, regional navigation and drill-down.
+- `components/region-table.tsx`: interactive regional comparison table.
+- `lib/mock-data.ts`: shared mock dataset, formatting helpers and derivation logic.
 - `next.config.mjs`: standalone Next.js output for deployment.
 
 ## Local Usage
