@@ -1,67 +1,61 @@
-import React from 'react'
+'use client'
+
+import React, { useMemo, useState } from 'react'
+import { generateMockData, REGIONS, MONTHS } from '../lib/mock-data'
+import FiltersPanel from '../components/filters-panel'
+import RegionChart from '../components/region-chart'
+import RegionTable from '../components/region-table'
 
 export default function Page() {
+  const [filters, setFilters] = useState<{ region?: string; from?: string; to?: string; minSales?: number }>({
+    from: MONTHS[0],
+    to: MONTHS[MONTHS.length - 1],
+  })
+
+  const allData = useMemo(() => generateMockData(42), [])
+
+  const filtered = useMemo(() => {
+    return allData
+      .map((r) => {
+        const monthly = r.monthly.filter((m) => (filters.from ? m.month >= filters.from : true) && (filters.to ? m.month <= filters.to : true))
+        const totalSales = monthly.reduce((s, m) => s + m.sales, 0)
+        return { ...r, monthly, totalSales }
+      })
+      .filter((r) => {
+        if (filters.region && r.region !== filters.region) return false
+        if (typeof filters.minSales === 'number' && r.totalSales < filters.minSales) return false
+        return true
+      })
+  }, [allData, filters])
+
+  // RegionChart expects a flat list of SaleRecords; transform mock data accordingly
+  const chartData = useMemo(() => {
+    return allData.flatMap((r) => r.monthly.map((m) => ({ region: r.region, category: 'All', month: m.month, amount: m.sales })))
+  }, [allData])
+
   return (
     <div>
       <h1 style={{ margin: 0, marginBottom: 12 }}>Ventas por región</h1>
 
       <section style={{ display: 'flex', gap: 20, marginBottom: 20 }}>
-        <div style={{ flex: '0 0 300px', padding: 12, border: '1px solid #e5e7eb', borderRadius: 8, background: '#fff' }}>
+        <div style={{ flex: '0 0 320px', padding: 12, border: '1px solid #e5e7eb', borderRadius: 8, background: '#fff' }}>
           <h3 style={{ marginTop: 0 }}>Filtros</h3>
-
-          <div style={{ marginBottom: 8 }}>
-            <label style={{ display: 'block', fontSize: 13, marginBottom: 4 }}>Región</label>
-            <select style={{ width: '100%', padding: 8 }}>
-              <option>Todos</option>
-              <option>Norte</option>
-              <option>Sur</option>
-              <option>Este</option>
-              <option>Oeste</option>
-            </select>
-          </div>
-
-          <div>
-            <label style={{ display: 'block', fontSize: 13, marginBottom: 4 }}>Periodo</label>
-            <select style={{ width: '100%', padding: 8 }}>
-              <option>Últimos 30 días</option>
-              <option>Últimos 90 días</option>
-              <option>Este año</option>
-            </select>
-          </div>
+          <FiltersPanel regions={REGIONS} months={MONTHS} onChange={(f) => setFilters(f as any)} />
         </div>
 
         <div style={{ flex: 1 }}>
           <div style={{ padding: 12, border: '1px solid #e5e7eb', borderRadius: 8, background: '#fff' }}>
             <h3 style={{ marginTop: 0 }}>Gráficos</h3>
-            <div style={{ height: 220, background: '#eef2ff', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4c1d95' }}>Placeholder: Mapa/Heatmap por región</div>
-            <div style={{ height: 220, marginTop: 12, background: '#ecfeff', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#065f46' }}>Placeholder: Serie temporal de ventas</div>
+            <RegionChart data={chartData} />
           </div>
         </div>
       </section>
 
       <section>
         <h3>Resumen por región</h3>
-        <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8 }}>
-          <thead>
-            <tr>
-              <th style={{ textAlign: 'left', padding: 8 }}>Región</th>
-              <th style={{ textAlign: 'right', padding: 8 }}>Ventas</th>
-              <th style={{ textAlign: 'right', padding: 8 }}>Cambio</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={{ padding: 8 }}>Norte</td>
-              <td style={{ padding: 8, textAlign: 'right' }}>€12,345</td>
-              <td style={{ padding: 8, textAlign: 'right' }}>+5%</td>
-            </tr>
-            <tr style={{ background: '#f8fafc' }}>
-              <td style={{ padding: 8 }}>Sur</td>
-              <td style={{ padding: 8, textAlign: 'right' }}>€9,876</td>
-              <td style={{ padding: 8, textAlign: 'right' }}>-2%</td>
-            </tr>
-          </tbody>
-        </table>
+        <div style={{ display: 'grid', gap: 12 }}>
+          <RegionTable data={filtered} />
+        </div>
       </section>
     </div>
   )
