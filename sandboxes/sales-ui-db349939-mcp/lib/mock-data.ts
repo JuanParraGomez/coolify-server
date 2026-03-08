@@ -6,7 +6,7 @@ export type SalesEntry = {
   amount: number;
 };
 
-export const REGIONS = ['North', 'South', 'East', 'West'] as const;
+export const REGIONS = ['North America', 'Europe', 'Asia', 'Latin America'] as const;
 export const PRODUCTS = ['Widget A', 'Widget B', 'Widget C'] as const;
 
 function mulberry32(a: number) {
