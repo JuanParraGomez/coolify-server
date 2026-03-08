@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ventas por Región – Plataforma Comercial</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #f0f4f8;
+        color: #1a202c;
+        min-height: 100vh;
+      }
+
+      /* Hero */
+      .hero {
+        background: linear-gradient(135deg, #1a56db 0%, #1e40af 100%);
+        color: #fff;
+        text-align: center;
+        padding: 4rem 1.5rem 3rem;
+      }
+      .hero h1 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.75rem;
+      }
+      .hero p {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        opacity: 0.9;
+        max-width: 560px;
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+      }
+      .btn-cta {
+        display: inline-block;
+        background: #f59e0b;
+        color: #1a202c;
+        font-weight: 700;
+        font-size: 1.05rem;
+        padding: 0.85rem 2.2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.15s;
+        cursor: pointer;
+        border: none;
+      }
+      .btn-cta:hover { background: #d97706; transform: translateY(-2px); }
+
+      /* Cards section */
+      .cards-section {
+        max-width: 1100px;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+      }
+      .cards-section h2 {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: #1e40af;
+      }
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1.75rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        transition: box-shadow 0.2s, transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.13); transform: translateY(-3px); }
+      .card-icon {
+        font-size: 2.2rem;
+        line-height: 1;
+      }
+      .card h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1e40af;
+      }
+      .card .region-tag {
+        display: inline-block;
+        background: #dbeafe;
+        color: #1e40af;
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        width: fit-content;
+      }
+      .card p {
+        color: #4a5568;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        flex: 1;
+      }
+      .stats {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .stat {
+        background: #f0f4f8;
+        border-radius: 8px;
+        padding: 0.5rem 0.9rem;
+        text-align: center;
+        flex: 1;
+        min-width: 80px;
+      }
+      .stat-value {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #1a56db;
+        display: block;
+      }
+      .stat-label {
+        font-size: 0.72rem;
+        color: #718096;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .card-cta {
+        display: inline-block;
+        background: #1a56db;
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 0.6rem 1.4rem;
+        border-radius: 6px;
+        text-decoration: none;
+        text-align: center;
+        transition: background 0.2s;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      .card-cta:hover { background: #1e40af; }
+
+      /* Bottom CTA banner */
+      .cta-banner {
+        background: linear-gradient(135deg, #1e40af 0%, #1a56db 100%);
+        color: #fff;
+        text-align: center;
+        padding: 3.5rem 1.5rem;
+        margin-top: 1rem;
+      }
+      .cta-banner h2 {
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        font-weight: 800;
+        margin-bottom: 0.75rem;
+      }
+      .cta-banner p {
+        font-size: 1.05rem;
+        opacity: 0.9;
+        max-width: 480px;
+        margin: 0 auto 2rem;
+        line-height: 1.5;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 0.82rem;
+        color: #718096;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Hero -->
+    <header class="hero">
+      <h1>Expande tu negocio por región</h1>
+      <p>Accede a datos de ventas en tiempo real y toma decisiones estratégicas para cada mercado regional.</p>
+      <a href="#planes" class="btn-cta">Ver planes disponibles</a>
+    </header>
+
+    <!-- Cards de regiones -->
+    <section class="cards-section" id="planes">
+      <h2>Rendimiento por Región</h2>
+      <div class="cards-grid">
+
+        <!-- Card 1: Norte -->
+        <div class="card">
+          <div class="card-icon">🌵</div>
+          <span class="region-tag">Región Norte</span>
+          <h3>Zona Norte</h3>
+          <p>Mercado en expansión con alta demanda en manufactura y logística. Ideal para distribución industrial y exportación fronteriza.</p>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-value">$4.2M</span>
+              <span class="stat-label">Ventas</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">+18%</span>
+              <span class="stat-label">Crecimiento</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">312</span>
+              <span class="stat-label">Clientes</span>
+            </div>
+          </div>
+          <a href="#contacto" class="card-cta">Explorar oportunidades</a>
+        </div>
+
+        <!-- Card 2: Centro -->
+        <div class="card">
+          <div class="card-icon">🏙️</div>
+          <span class="region-tag">Región Centro</span>
+          <h3>Zona Centro</h3>
+          <p>Núcleo comercial con el mayor volumen de transacciones. Concentra retail, servicios financieros y tecnología de punta.</p>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-value">$9.8M</span>
+              <span class="stat-label">Ventas</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">+24%</span>
+              <span class="stat-label">Crecimiento</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">871</span>
+              <span class="stat-label">Clientes</span>
+            </div>
+          </div>
+          <a href="#contacto" class="card-cta">Explorar oportunidades</a>
+        </div>
+
+        <!-- Card 3: Sur -->
+        <div class="card">
+          <div class="card-icon">🌿</div>
+          <span class="region-tag">Región Sur</span>
+          <h3>Zona Sur</h3>
+          <p>Mercado emergente con fuerte crecimiento en agroindustria, turismo y energías renovables. Gran potencial a mediano plazo.</p>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-value">$2.6M</span>
+              <span class="stat-label">Ventas</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">+31%</span>
+              <span class="stat-label">Crecimiento</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">198</span>
+              <span class="stat-label">Clientes</span>
+            </div>
+          </div>
+          <a href="#contacto" class="card-cta">Explorar oportunidades</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA inferior -->
+    <section class="cta-banner" id="contacto">
+      <h2>¿Listo para crecer en tu región?</h2>
+      <p>Habla con un especialista y recibe un análisis personalizado del mercado en tu zona.</p>
+      <a href="mailto:ventas@example.com" class="btn-cta">Contactar a un especialista</a>
+    </section>
+
+    <footer>
+      © 2026 Plataforma Comercial Regional · Datos simulados con fines demostrativos
+    </footer>
+
+  </body>
+</html>

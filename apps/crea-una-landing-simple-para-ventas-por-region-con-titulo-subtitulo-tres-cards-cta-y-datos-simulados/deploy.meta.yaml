@@ -1,0 +1,7 @@
+provider: coolify
+repo: coolify-server
+base_directory: /apps/crea-una-landing-simple-para-ventas-por-region-con-titulo-subtitulo-tres-cards-cta-y-datos-simulados
+app_type: static_html
+autodeploy: true
+exposed: true
+environment_profile: production
