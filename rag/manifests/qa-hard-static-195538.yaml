@@ -1,0 +1,10 @@
+slug: qa-hard-static-195538
+source_paths:
+- apps/qa-hard-static-195538/README.md
+- apps/qa-hard-static-195538/app.meta.yaml
+- apps/qa-hard-static-195538/deploy.meta.yaml
+last_sync_at: '2026-03-08T19:55:40.220559Z'
+rag_sync_status: in_sync
+signature: bae98d7180b98362435c98fece35866a7ff2c380ae568728fe924fe1ac76f2d0
+document_id: d3c8df06-dec9-49cb-9355-8de4b2ffcd82
+notes: null

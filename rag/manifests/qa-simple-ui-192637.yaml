@@ -1,0 +1,10 @@
+slug: qa-simple-ui-192637
+source_paths:
+- apps/qa-simple-ui-192637/README.md
+- apps/qa-simple-ui-192637/app.meta.yaml
+- apps/qa-simple-ui-192637/deploy.meta.yaml
+last_sync_at: '2026-03-08T19:26:39.397496Z'
+rag_sync_status: in_sync
+signature: 0afbe60c0ebed4512e5c4d4283a2a8de4212b353042ce11e0e5abd63b4e662ce
+document_id: 7587d9d1-e929-43aa-914b-06b98351c13d
+notes: null

@@ -1,0 +1,29 @@
+project_id: prj_3f184036fe50
+slug: sales-probe-f5ea4e86
+name: Sales Region UI Probe
+description: Dashboard Next.js para revisar ventas por region con filtros interactivos,
+  metricas ejecutivas, graficos y tabla operativa sin dependencias externas.
+lifetime: long_lived
+status: archived
+template: nextjs-starter
+app_type: nextjs
+project_root: apps/sales-probe-f5ea4e86
+repo_root: coolify-server
+deployment_provider: coolify
+domain: sales-probe-f5ea4e86.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: sales-probe-f5ea4e86
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T04:22:50.267714Z'
+updated_at: '2026-03-08T19:21:21.594936Z'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: cleanup tester 2026-03-08T19:21:21.590843+00:00
+registry_path: registry/projects/sales-probe-f5ea4e86.yaml
+readme_path: apps/sales-probe-f5ea4e86/README.md
+app_meta_path: apps/sales-probe-f5ea4e86/app.meta.yaml
+deploy_meta_path: apps/sales-probe-f5ea4e86/deploy.meta.yaml

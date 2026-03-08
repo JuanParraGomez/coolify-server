@@ -1,0 +1,10 @@
+slug: sales-region-analyzer-batch
+source_paths:
+- apps/sales-region-analyzer-batch/README.md
+- apps/sales-region-analyzer-batch/app.meta.yaml
+- apps/sales-region-analyzer-batch/deploy.meta.yaml
+last_sync_at: '2026-03-08T14:45:08.206471Z'
+rag_sync_status: in_sync
+signature: 6a80f5f2ad8439e9765555348ce0634c8062efd03fe6128467e17edf2c0323ce
+document_id: ca797ea5-25da-4d88-857e-2a8137290049
+notes: null

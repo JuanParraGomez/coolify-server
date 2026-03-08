@@ -1,0 +1,24 @@
+project_id: prj_bb2c37a8296a
+slug: sales-ui-44aacf17-mcp
+name: Sales Region UI MCP
+description: crea una app para ver ventas por region con filtros y graficos
+project_type: short_lived
+status: archived
+template: static-html-starter
+app_type: static_html
+repo_root: coolify-server
+project_root: sandboxes/sales-ui-44aacf17-mcp
+deployment_provider: docker
+coolify_project: null
+coolify_application: null
+domain: sales-ui-44aacf17-mcp.sandbox.uniflexa.cloud
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: 24
+created_at: '2026-03-08T01:58:24.190468+00:00'
+updated_at: '2026-03-08T19:21:21.832928+00:00'
+expires_at: '2026-03-09T01:58:24.190468+00:00'
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: cleanup tester 2026-03-08T19:21:21.827954+00:00

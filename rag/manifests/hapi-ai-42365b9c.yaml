@@ -1,0 +1,10 @@
+slug: hapi-ai-42365b9c
+source_paths:
+- apps/hapi-ai-42365b9c/README.md
+- apps/hapi-ai-42365b9c/app.meta.yaml
+- apps/hapi-ai-42365b9c/deploy.meta.yaml
+last_sync_at: '2026-03-08T23:14:32.549069Z'
+rag_sync_status: in_sync
+signature: 447a6c78511ccfe952a1423dbc1607c5da1e87d00026dd996f2748ec2cb78854
+document_id: cb08832a-6873-436f-b227-c42587837b02
+notes: stack-probe ai validation

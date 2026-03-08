@@ -1,0 +1,10 @@
+slug: smoke-landing-005
+source_paths:
+- apps/smoke-landing-005/README.md
+- apps/smoke-landing-005/app.meta.yaml
+- apps/smoke-landing-005/deploy.meta.yaml
+last_sync_at: '2026-03-08T19:04:10.621792Z'
+rag_sync_status: in_sync
+signature: fa9ef11e2686536800e68cbb0e6c840ab84204c79bae2ef9ae1fdffe56e08bca
+document_id: 2766fc57-ee06-4cac-b8a0-f95cf7613791
+notes: null

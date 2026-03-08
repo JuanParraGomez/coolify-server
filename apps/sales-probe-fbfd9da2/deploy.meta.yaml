@@ -1,0 +1,7 @@
+provider: coolify
+repo: coolify-server
+base_directory: /apps/sales-probe-fbfd9da2
+app_type: static_html
+autodeploy: true
+exposed: true
+environment_profile: production

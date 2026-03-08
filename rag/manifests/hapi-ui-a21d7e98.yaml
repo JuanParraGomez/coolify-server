@@ -1,0 +1,10 @@
+slug: hapi-ui-a21d7e98
+source_paths:
+- apps/hapi-ui-a21d7e98/README.md
+- apps/hapi-ui-a21d7e98/app.meta.yaml
+- apps/hapi-ui-a21d7e98/deploy.meta.yaml
+last_sync_at: '2026-03-08T22:59:56.220622Z'
+rag_sync_status: in_sync
+signature: 881ddfcf93e71169c5d432bd42e8bd1410d6d2b72e91a52de183bf5cc346953f
+document_id: a2155053-201b-482a-a776-2af73eff876a
+notes: stack-probe direct validation

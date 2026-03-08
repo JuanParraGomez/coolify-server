@@ -1,0 +1,31 @@
+project_id: prj_262ea45bd82f
+slug: commercial-ops-control-center-batch
+name: Commercial Ops Control Center Batch
+description: crea una aplicacion analitica multipagina para ventas, inventario y cumplimiento
+  comercial con dashboard ejecutivo, filtros globales, tablas, comparativos por region,
+  vistas por producto, resumen de alertas, exportes simulados, detalle por vendedor
+  y datos simulados en Next.js
+lifetime: long_lived
+status: active
+template: nextjs-starter
+app_type: nextjs
+project_root: apps/commercial-ops-control-center-batch
+repo_root: coolify-server
+deployment_provider: coolify
+domain: commercial-ops-control-center-batch.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: commercial-ops-control-center-batch
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T15:04:05.894708Z'
+updated_at: '2026-03-08T15:04:06.916477Z'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: null
+registry_path: registry/projects/commercial-ops-control-center-batch.yaml
+readme_path: apps/commercial-ops-control-center-batch/README.md
+app_meta_path: apps/commercial-ops-control-center-batch/app.meta.yaml
+deploy_meta_path: apps/commercial-ops-control-center-batch/deploy.meta.yaml

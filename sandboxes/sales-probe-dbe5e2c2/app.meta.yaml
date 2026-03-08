@@ -1,0 +1,24 @@
+project_id: prj_88bdb9ea3c4e
+slug: sales-probe-dbe5e2c2
+name: Sales Region UI Probe
+description: crea una app para ver ventas por region con filtros y graficos
+project_type: short_lived
+status: archived
+template: static-html-starter
+app_type: static_html
+repo_root: coolify-server
+project_root: sandboxes/sales-probe-dbe5e2c2
+deployment_provider: docker
+coolify_project: null
+coolify_application: null
+domain: sales-probe-dbe5e2c2.sandbox.uniflexa.cloud
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: 24
+created_at: '2026-03-08T02:02:27.692982+00:00'
+updated_at: '2026-03-08T19:21:21.779995+00:00'
+expires_at: '2026-03-09T02:02:27.692982+00:00'
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: cleanup tester 2026-03-08T19:21:21.775894+00:00

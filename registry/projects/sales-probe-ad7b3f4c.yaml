@@ -1,0 +1,30 @@
+project_id: prj_af2a6dffabfd
+slug: sales-probe-ad7b3f4c
+name: Sales Region UI Probe
+description: Prueba el flujo UI factory completo. Debes crear una landing simple para
+  ventas por region con titulo, resumen de metricas y datos simulados, luego verificar
+  en hapi y rag que quedo registrado.
+lifetime: long_lived
+status: archived
+template: static-html-starter
+app_type: static_html
+project_root: apps/sales-probe-ad7b3f4c
+repo_root: coolify-server
+deployment_provider: coolify
+domain: sales-probe-ad7b3f4c.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: sales-probe-ad7b3f4c
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T03:39:49.303036Z'
+updated_at: '2026-03-08T19:21:21.696063Z'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: cleanup tester 2026-03-08T19:21:21.690072+00:00
+registry_path: registry/projects/sales-probe-ad7b3f4c.yaml
+readme_path: apps/sales-probe-ad7b3f4c/README.md
+app_meta_path: apps/sales-probe-ad7b3f4c/app.meta.yaml
+deploy_meta_path: apps/sales-probe-ad7b3f4c/deploy.meta.yaml

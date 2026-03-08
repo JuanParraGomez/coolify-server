@@ -5,7 +5,7 @@ name: Crea Una App Para Ver Ventas Por Region Con Filtros Graficos Tabla Drill D
 description: crea una app para ver ventas por region con filtros, graficos, tabla,
   drill-down por region, navegacion y datos simulados en Next.js
 project_type: long_lived
-status: ready_for_deploy
+status: archived
 template: nextjs-starter
 app_type: nextjs
 repo_root: coolify-server
@@ -18,9 +18,9 @@ rag_sync_enabled: true
 rag_sync_status: in_sync
 ttl_hours: null
 created_at: '2026-03-08T05:00:14.868061+00:00'
-updated_at: '2026-03-08T05:16:14.832207+00:00'
+updated_at: '2026-03-08T19:21:21.558003+00:00'
 expires_at: null
 promoted_from: null
 created_by: hapi
 managed_by: hapi
-notes: ''
+notes: cleanup tester 2026-03-08T19:21:21.552817+00:00

@@ -1,0 +1,25 @@
+project_id: prj_2e0761550059
+slug: qa-hard-ui-194247
+name: QA Hard UI
+description: crea un dashboard de ventas por region con filtros, graficos y tabla
+  comparativa por trimestre, navegacion entre resumen y detalle
+project_type: long_lived
+status: active
+template: nextjs-starter
+app_type: nextjs
+repo_root: coolify-server
+project_root: apps/qa-hard-ui-194247
+deployment_provider: coolify
+coolify_project: ui-factory-prod
+coolify_application: qa-hard-ui-194247
+domain: qa-hard-ui-194247.apps.uniflexa.cloud
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T19:42:48.642220+00:00'
+updated_at: '2026-03-08T19:42:49.455556+00:00'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: ''

@@ -1,0 +1,10 @@
+slug: commercial-ops-control-center-batch
+source_paths:
+- apps/commercial-ops-control-center-batch/README.md
+- apps/commercial-ops-control-center-batch/app.meta.yaml
+- apps/commercial-ops-control-center-batch/deploy.meta.yaml
+last_sync_at: '2026-03-08T15:04:06.915893Z'
+rag_sync_status: in_sync
+signature: 4326ea70caca6d591107cfd46afcdc35f27f01738582507b66a193cbcadba64b
+document_id: d2bb3799-fd64-4500-a188-55ebf3e785e2
+notes: null

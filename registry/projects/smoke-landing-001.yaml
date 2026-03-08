@@ -1,0 +1,28 @@
+project_id: prj_7ccf4ba74316
+slug: smoke-landing-001
+name: Smoke Landing 001
+description: crea una landing de prueba con titulo subtitulo y boton
+lifetime: long_lived
+status: archived
+template: static-html-starter
+app_type: static_html
+project_root: apps/smoke-landing-001
+repo_root: coolify-server
+deployment_provider: coolify
+domain: smoke-landing-001.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: smoke-landing-001
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T18:14:13.315453Z'
+updated_at: '2026-03-08T19:21:43.996117Z'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: cleanup tester 2026-03-08T19:21:43.996106+00:00
+registry_path: registry/projects/smoke-landing-001.yaml
+readme_path: apps/smoke-landing-001/README.md
+app_meta_path: apps/smoke-landing-001/app.meta.yaml
+deploy_meta_path: apps/smoke-landing-001/deploy.meta.yaml

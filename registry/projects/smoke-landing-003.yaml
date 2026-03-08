@@ -1,0 +1,28 @@
+project_id: prj_3db885c8edc4
+slug: smoke-landing-003
+name: Smoke Landing 003
+description: crea una landing simple con titulo subtitulo y boton
+lifetime: long_lived
+status: archived
+template: static-html-starter
+app_type: static_html
+project_root: apps/smoke-landing-003
+repo_root: coolify-server
+deployment_provider: coolify
+domain: smoke-landing-003.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: smoke-landing-003
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T18:26:05.584138Z'
+updated_at: '2026-03-08T19:21:21.483961Z'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: cleanup tester 2026-03-08T19:21:21.481153+00:00
+registry_path: registry/projects/smoke-landing-003.yaml
+readme_path: apps/smoke-landing-003/README.md
+app_meta_path: apps/smoke-landing-003/app.meta.yaml
+deploy_meta_path: apps/smoke-landing-003/deploy.meta.yaml

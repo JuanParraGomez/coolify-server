@@ -1,0 +1,10 @@
+slug: sales-probe-965be433
+source_paths:
+- apps/sales-probe-965be433/README.md
+- apps/sales-probe-965be433/app.meta.yaml
+- apps/sales-probe-965be433/deploy.meta.yaml
+last_sync_at: '2026-03-08T04:21:57.129027Z'
+rag_sync_status: in_sync
+signature: 554333219075b235649d059ecb3e53731e1d647ee0be468efe5919b25a06764e
+document_id: b611801f-7203-4b8f-b455-3b8127ea3b30
+notes: null

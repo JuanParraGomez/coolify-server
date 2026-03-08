@@ -1,0 +1,28 @@
+project_id: prj_6af0a53a3e4d
+slug: hapi-ai-42365b9c
+name: Hapi AI Demo
+description: Proyecto demo creado por la validacion AI de stack-probe.
+lifetime: long_lived
+status: active
+template: nextjs-starter
+app_type: nextjs
+project_root: apps/hapi-ai-42365b9c
+repo_root: coolify-server
+deployment_provider: coolify
+domain: hapi-ai-42365b9c.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: hapi-ai-42365b9c
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T23:14:28.355214Z'
+updated_at: '2026-03-08T23:14:32.549701Z'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: null
+registry_path: registry/projects/hapi-ai-42365b9c.yaml
+readme_path: apps/hapi-ai-42365b9c/README.md
+app_meta_path: apps/hapi-ai-42365b9c/app.meta.yaml
+deploy_meta_path: apps/hapi-ai-42365b9c/deploy.meta.yaml

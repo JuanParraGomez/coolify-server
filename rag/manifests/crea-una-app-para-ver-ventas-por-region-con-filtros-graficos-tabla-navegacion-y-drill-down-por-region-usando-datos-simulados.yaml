@@ -1,0 +1,10 @@
+slug: crea-una-app-para-ver-ventas-por-region-con-filtros-graficos-tabla-navegacion-y-drill-down-por-region-usando-datos-simulados
+source_paths:
+- apps/crea-una-app-para-ver-ventas-por-region-con-filtros-graficos-tabla-navegacion-y-drill-down-por-region-usando-datos-simulados/README.md
+- apps/crea-una-app-para-ver-ventas-por-region-con-filtros-graficos-tabla-navegacion-y-drill-down-por-region-usando-datos-simulados/app.meta.yaml
+- apps/crea-una-app-para-ver-ventas-por-region-con-filtros-graficos-tabla-navegacion-y-drill-down-por-region-usando-datos-simulados/deploy.meta.yaml
+last_sync_at: '2026-03-08T04:34:04.538706Z'
+rag_sync_status: in_sync
+signature: eeb012d10961f89e82e9a74d3901b990e3141efa7428f524e0853e0bb0078b14
+document_id: b3c19df4-3728-4492-a5f8-42e5194bc58c
+notes: null

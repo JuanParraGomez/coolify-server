@@ -1,0 +1,10 @@
+slug: sales-probe-58b63db4
+source_paths:
+- apps/sales-probe-58b63db4/README.md
+- apps/sales-probe-58b63db4/app.meta.yaml
+- apps/sales-probe-58b63db4/deploy.meta.yaml
+last_sync_at: '2026-03-08T03:58:23.060417Z'
+rag_sync_status: in_sync
+signature: 51d4fad9e1241079117da1492551e76c1e2a21929eed24232d09b404db57b921
+document_id: 9e8b00a5-f161-43be-81bd-a43fab3df378
+notes: null

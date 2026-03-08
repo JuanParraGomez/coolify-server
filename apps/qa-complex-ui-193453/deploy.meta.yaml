@@ -1,0 +1,7 @@
+provider: coolify
+repo: coolify-server
+base_directory: /apps/qa-complex-ui-193453
+app_type: nextjs
+autodeploy: true
+exposed: true
+environment_profile: production

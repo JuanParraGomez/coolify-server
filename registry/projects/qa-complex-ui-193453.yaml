@@ -1,0 +1,30 @@
+project_id: prj_6bbf7479912a
+slug: qa-complex-ui-193453
+name: QA Complex UI
+description: crea una app compleja para analizar ventas por region con filtros avanzados,
+  graficos, tabla con drill-down, navegacion por secciones, resumen KPI y comparativas
+  trimestrales
+lifetime: long_lived
+status: active
+template: nextjs-starter
+app_type: nextjs
+project_root: apps/qa-complex-ui-193453
+repo_root: coolify-server
+deployment_provider: coolify
+domain: qa-complex-ui-193453.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: qa-complex-ui-193453
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T19:34:53.638413Z'
+updated_at: '2026-03-08T19:34:54.405199Z'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: ''
+registry_path: registry/projects/qa-complex-ui-193453.yaml
+readme_path: apps/qa-complex-ui-193453/README.md
+app_meta_path: apps/qa-complex-ui-193453/app.meta.yaml
+deploy_meta_path: apps/qa-complex-ui-193453/deploy.meta.yaml

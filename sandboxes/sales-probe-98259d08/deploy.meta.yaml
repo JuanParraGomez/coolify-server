@@ -1,0 +1,7 @@
+provider: docker
+repo: coolify-server
+base_directory: /sandboxes/sales-probe-98259d08
+app_type: static_html
+autodeploy: false
+exposed: true
+environment_profile: sandbox
