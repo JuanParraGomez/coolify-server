@@ -104,7 +104,7 @@ export function buildRegionSummaries(records: SaleRecord[]): RegionSummary[] {
 
     const byCat = new Map<Category, number>()
     for (const r of recs) byCat.set(r.category, (byCat.get(r.category) ?? 0) + r.revenue)
-    const topCategory = [...byCat.entries()].sort((a, b) => b[1] - a[1])[0][0]
+    const topCategory = Array.from(byCat.entries()).sort((a, b) => b[1] - a[1])[0][0]
 
     return { region, totalRevenue, totalUnits, totalTarget, achievementPct, topCategory, records: recs }
   })
