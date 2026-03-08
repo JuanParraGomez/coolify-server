@@ -4,8 +4,8 @@ name: Sales Region UI MCP
 description: crea una app para ver ventas por region con filtros y graficos
 project_type: short_lived
 status: sandbox
-template: nextjs-starter
-app_type: nextjs
+template: static-html-starter
+app_type: static_html
 repo_root: coolify-server
 project_root: sandboxes/sales-ui-a21d7e98-mcp
 deployment_provider: docker

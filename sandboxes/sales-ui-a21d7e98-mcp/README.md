@@ -18,5 +18,5 @@ crea una app para ver ventas por region con filtros y graficos
 
 ## Initial Scaffold
 - `Dockerfile`
-- `app/` (Next.js app)
-- `components/`, `lib/` (React components and utilities)
+- `index.html`
+- Optional folders for future UI expansion: `app/`, `components/`, `lib/`
