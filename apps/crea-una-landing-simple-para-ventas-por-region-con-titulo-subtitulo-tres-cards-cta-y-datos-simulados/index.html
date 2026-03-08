@@ -3,19 +3,47 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Landing page de ventas por region con metricas simuladas para Norte, Centro y Sur."
+    />
     <title>Ventas por Región – Plataforma Comercial</title>
     <style>
+      :root {
+        --bg-page: #f0f4f8;
+        --bg-surface: #ffffff;
+        --bg-subtle: #dbeafe;
+        --bg-stat: #e2e8f0;
+        --text-main: #1a202c;
+        --text-muted: #4a5568;
+        --text-soft: #718096;
+        --brand-primary: #1a56db;
+        --brand-primary-dark: #1e40af;
+        --accent: #f59e0b;
+        --accent-dark: #d97706;
+        --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+        --shadow-card-hover: 0 6px 24px rgba(0, 0, 0, 0.13);
+        --radius-lg: 12px;
+        --radius-md: 8px;
+        --radius-sm: 6px;
+      }
+
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
       body {
         font-family: 'Segoe UI', Arial, sans-serif;
-        background: #f0f4f8;
-        color: #1a202c;
+        background: var(--bg-page);
+        color: var(--text-main);
         min-height: 100vh;
+      }
+      a:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 3px;
       }
 
       /* Hero */
       .hero {
-        background: linear-gradient(135deg, #1a56db 0%, #1e40af 100%);
+        background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
         color: #fff;
         text-align: center;
         padding: 4rem 1.5rem 3rem;
@@ -35,18 +63,18 @@
       }
       .btn-cta {
         display: inline-block;
-        background: #f59e0b;
-        color: #1a202c;
+        background: var(--accent);
+        color: var(--text-main);
         font-weight: 700;
         font-size: 1.05rem;
         padding: 0.85rem 2.2rem;
-        border-radius: 8px;
+        border-radius: var(--radius-md);
         text-decoration: none;
         transition: background 0.2s, transform 0.15s;
         cursor: pointer;
         border: none;
       }
-      .btn-cta:hover { background: #d97706; transform: translateY(-2px); }
+      .btn-cta:hover { background: var(--accent-dark); transform: translateY(-2px); }
 
       /* Cards section */
       .cards-section {
@@ -59,7 +87,7 @@
         font-size: 1.6rem;
         font-weight: 700;
         margin-bottom: 2rem;
-        color: #1e40af;
+        color: var(--brand-primary-dark);
       }
       .cards-grid {
         display: grid;
@@ -67,16 +95,16 @@
         gap: 1.5rem;
       }
       .card {
-        background: #fff;
-        border-radius: 12px;
+        background: var(--bg-surface);
+        border-radius: var(--radius-lg);
         padding: 1.75rem;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        box-shadow: var(--shadow-card);
         transition: box-shadow 0.2s, transform 0.2s;
         display: flex;
         flex-direction: column;
         gap: 1rem;
       }
-      .card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.13); transform: translateY(-3px); }
+      .card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
       .card-icon {
         font-size: 2.2rem;
         line-height: 1;
@@ -84,12 +112,12 @@
       .card h3 {
         font-size: 1.2rem;
         font-weight: 700;
-        color: #1e40af;
+        color: var(--brand-primary-dark);
       }
       .card .region-tag {
         display: inline-block;
-        background: #dbeafe;
-        color: #1e40af;
+        background: var(--bg-subtle);
+        color: var(--brand-primary-dark);
         font-size: 0.78rem;
         font-weight: 600;
         padding: 0.25rem 0.65rem;
@@ -99,7 +127,7 @@
         width: fit-content;
       }
       .card p {
-        color: #4a5568;
+        color: var(--text-muted);
         font-size: 0.95rem;
         line-height: 1.6;
         flex: 1;
@@ -110,8 +138,8 @@
         flex-wrap: wrap;
       }
       .stat {
-        background: #f0f4f8;
-        border-radius: 8px;
+        background: var(--bg-stat);
+        border-radius: var(--radius-md);
         padding: 0.5rem 0.9rem;
         text-align: center;
         flex: 1;
@@ -120,23 +148,23 @@
       .stat-value {
         font-size: 1.3rem;
         font-weight: 800;
-        color: #1a56db;
+        color: var(--brand-primary);
         display: block;
       }
       .stat-label {
         font-size: 0.72rem;
-        color: #718096;
+        color: var(--text-soft);
         text-transform: uppercase;
         letter-spacing: 0.03em;
       }
       .card-cta {
         display: inline-block;
-        background: #1a56db;
+        background: var(--brand-primary);
         color: #fff;
         font-weight: 600;
         font-size: 0.9rem;
         padding: 0.6rem 1.4rem;
-        border-radius: 6px;
+        border-radius: var(--radius-sm);
         text-decoration: none;
         text-align: center;
         transition: background 0.2s;
@@ -144,11 +172,11 @@
         cursor: pointer;
         width: 100%;
       }
-      .card-cta:hover { background: #1e40af; }
+      .card-cta:hover { background: var(--brand-primary-dark); }
 
       /* Bottom CTA banner */
       .cta-banner {
-        background: linear-gradient(135deg, #1e40af 0%, #1a56db 100%);
+        background: linear-gradient(135deg, var(--brand-primary-dark) 0%, var(--brand-primary) 100%);
         color: #fff;
         text-align: center;
         padding: 3.5rem 1.5rem;
@@ -171,7 +199,7 @@
         text-align: center;
         padding: 1.5rem;
         font-size: 0.82rem;
-        color: #718096;
+        color: var(--text-soft);
       }
     </style>
   </head>
