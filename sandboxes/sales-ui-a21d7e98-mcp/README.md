@@ -6,9 +6,9 @@ crea una app para ver ventas por region con filtros y graficos
 ## Project Identity
 - slug: `sales-ui-a21d7e98-mcp`
 - project_type: `short_lived`
-- template: `static-html-starter`
+- template: `nextjs-starter`
 - project_root: `sandboxes/sales-ui-a21d7e98-mcp`
-- deployment_provider: `docker`
+- deployment_provider: `coolify`
 - domain: `sales-ui-a21d7e98-mcp.sandbox.uniflexa.cloud`
 
 ## How It Should Be Managed
@@ -17,6 +17,6 @@ crea una app para ver ventas por region con filtros y graficos
 - Keep `app.meta.yaml` and `deploy.meta.yaml` aligned with this file.
 
 ## Initial Scaffold
-- `Dockerfile`
-- `index.html`
-- Optional folders for future UI expansion: `app/`, `components/`, `lib/`
+- `package.json`
+- `next.config.mjs`
+- `app/page.tsx`
