@@ -20,3 +20,10 @@ crea una app para ver ventas por region con filtros y graficos
 - `package.json`
 - `next.config.mjs`
 - `app/page.tsx`
+
+## Run locally
+From the repository root:
+
+1. cd apps/sales-ui-8c446018
+2. npm install
+3. npm run dev
