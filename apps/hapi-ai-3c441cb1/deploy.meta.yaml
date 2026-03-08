@@ -1,6 +1,6 @@
 provider: coolify
 repo: coolify-server
-base_directory: /apps/sales-ui-3ee1768e
+base_directory: /apps/hapi-ai-3c441cb1
 app_type: nextjs
 autodeploy: true
 exposed: true
