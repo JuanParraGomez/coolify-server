@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Analítica Comercial 360 | Landing Enterprise</title>
+    <style>
+      :root {
+        --bg: #070b17;
+        --bg-soft: #111a2f;
+        --card: rgba(17, 26, 47, 0.78);
+        --card-border: rgba(147, 174, 255, 0.24);
+        --text: #eef3ff;
+        --text-muted: #b5c2e4;
+        --primary: #6f8cff;
+        --primary-soft: #9cb1ff;
+        --accent: #26d7b0;
+        --danger: #ff6d95;
+        --warning: #ffc767;
+        --shadow: 0 22px 45px rgba(2, 8, 27, 0.42);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 10% -15%, #273f8a 0%, transparent 45%),
+          radial-gradient(circle at 85% 20%, #0f6f6a 0%, transparent 42%),
+          linear-gradient(165deg, #070b17 0%, #0a1228 50%, #050912 100%);
+      }
+
+      body {
+        line-height: 1.55;
+      }
+
+      .container {
+        width: min(1160px, calc(100% - 3rem));
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--primary-soft);
+        background: rgba(111, 140, 255, 0.12);
+        border: 1px solid rgba(156, 177, 255, 0.35);
+        border-radius: 999px;
+        padding: 0.4rem 0.8rem;
+      }
+
+      .hero {
+        padding: 4.2rem 0 3rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 2.25rem;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.15;
+      }
+
+      .hero h1 {
+        margin-top: 1.25rem;
+        font-size: clamp(2rem, 4vw, 3.6rem);
+        max-width: 18ch;
+      }
+
+      .hero p {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        max-width: 58ch;
+        margin: 1rem 0 1.6rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.75rem;
+        border: 1px solid transparent;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 0.82rem 1.2rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        color: #ffffff;
+        background: linear-gradient(130deg, #6f8cff, #5e74ff);
+        box-shadow: 0 12px 24px rgba(56, 80, 201, 0.35);
+      }
+
+      .btn-secondary {
+        color: var(--text);
+        border-color: rgba(166, 183, 239, 0.45);
+        background: rgba(16, 23, 43, 0.72);
+      }
+
+      .hero-panel {
+        border-radius: 1.2rem;
+        border: 1px solid var(--card-border);
+        background: var(--card);
+        box-shadow: var(--shadow);
+        padding: 1.2rem;
+      }
+
+      .hero-panel header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .mini-chart {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0.45rem;
+        align-items: end;
+        min-height: 140px;
+      }
+
+      .mini-chart span {
+        border-radius: 0.45rem 0.45rem 0.2rem 0.2rem;
+        background: linear-gradient(180deg, rgba(38, 215, 176, 0.95), rgba(111, 140, 255, 0.7));
+      }
+
+      section {
+        padding: 2.8rem 0;
+      }
+
+      .section-title {
+        margin-bottom: 0.7rem;
+        font-size: clamp(1.5rem, 2.7vw, 2.4rem);
+      }
+
+      .section-lead {
+        margin: 0;
+        color: var(--text-muted);
+        max-width: 70ch;
+      }
+
+      .value-grid,
+      .metrics-grid,
+      .compare-grid,
+      .faq-grid {
+        margin-top: 1.5rem;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .value-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card {
+        border: 1px solid var(--card-border);
+        background: var(--card);
+        border-radius: 1rem;
+        padding: 1.1rem;
+        box-shadow: var(--shadow);
+      }
+
+      .card h3 {
+        font-size: 1.08rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--text-muted);
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .metric-value {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-top: 0.35rem;
+      }
+
+      .metric-delta {
+        margin-top: 0.8rem;
+        display: inline-flex;
+        border-radius: 999px;
+        padding: 0.25rem 0.65rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+
+      .up {
+        color: #ccffe9;
+        background: rgba(38, 215, 176, 0.22);
+      }
+
+      .down {
+        color: #ffd6e2;
+        background: rgba(255, 109, 149, 0.18);
+      }
+
+      .flat {
+        color: #ffe7c4;
+        background: rgba(255, 199, 103, 0.21);
+      }
+
+      .compare-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .compare-card ul {
+        margin: 0.8rem 0 0;
+        padding-left: 1.15rem;
+      }
+
+      .compare-card li {
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      .compare-card strong {
+        color: var(--text);
+      }
+
+      .faq-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      details {
+        border: 1px solid var(--card-border);
+        border-radius: 0.9rem;
+        background: rgba(15, 24, 46, 0.72);
+        padding: 0.95rem 1rem;
+      }
+
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+        list-style: none;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      details p {
+        color: var(--text-muted);
+        margin: 0.8rem 0 0;
+      }
+
+      .cta {
+        margin: 1rem 0 4rem;
+      }
+
+      .cta-box {
+        text-align: center;
+        border-radius: 1.2rem;
+        border: 1px solid rgba(156, 177, 255, 0.42);
+        background:
+          radial-gradient(circle at 20% 20%, rgba(111, 140, 255, 0.28), transparent 40%),
+          radial-gradient(circle at 80% 75%, rgba(38, 215, 176, 0.2), transparent 38%),
+          rgba(12, 20, 38, 0.9);
+        box-shadow: var(--shadow);
+        padding: 2.25rem 1.4rem;
+      }
+
+      .cta-box p {
+        margin: 0.85rem auto 1.4rem;
+        color: var(--text-muted);
+        max-width: 66ch;
+      }
+
+      footer {
+        text-align: center;
+        color: #8da0d1;
+        font-size: 0.85rem;
+        padding-bottom: 2rem;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .value-grid,
+        .metrics-grid,
+        .compare-grid,
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Inteligencia comercial en tiempo real</span>
+          <h1>Convierte datos dispersos en decisiones de crecimiento rentables</h1>
+          <p>
+            Una landing de analítica comercial diseñada para equipos exigentes: integra CRM, e-commerce y finanzas;
+            detecta fricciones del funnel; prioriza oportunidades; y ejecuta alertas accionables en minutos, no semanas.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cta-final">Solicitar demo estratégica</a>
+            <a class="btn btn-secondary" href="#comparativas">Ver comparativas de impacto</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Panel visual de rendimiento comercial">
+          <header>
+            <strong>Pipeline consolidado</strong>
+            <span>Actualizado hace 2 min</span>
+          </header>
+          <div class="mini-chart" aria-hidden="true">
+            <span style="height: 34%"></span>
+            <span style="height: 48%"></span>
+            <span style="height: 57%"></span>
+            <span style="height: 44%"></span>
+            <span style="height: 62%"></span>
+            <span style="height: 71%"></span>
+            <span style="height: 86%"></span>
+            <span style="height: 94%"></span>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main class="container">
+      <section aria-labelledby="propuesta-valor">
+        <h2 id="propuesta-valor" class="section-title">Propuesta de valor</h2>
+        <p class="section-lead">
+          Diseñada para liderazgo comercial, operaciones y revenue: una sola capa analítica para capturar margen, acelerar
+          conversiones y escalar previsibilidad sin aumentar la complejidad operativa.
+        </p>
+        <div class="value-grid">
+          <article class="card">
+            <h3>Visión 360° del ingreso</h3>
+            <p>Unifica adquisición, retención y expansión por segmento, canal y ejecutivo con trazabilidad completa.</p>
+          </article>
+          <article class="card">
+            <h3>Decisiones con contexto</h3>
+            <p>Relaciona cada KPI con causa raíz, riesgos y oportunidades para activar planes de acción realistas.</p>
+          </article>
+          <article class="card">
+            <h3>Automatización inteligente</h3>
+            <p>Alertas predictivas y recomendaciones priorizadas para proteger revenue antes de que aparezca la caída.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="metricas-clave">
+        <h2 id="metricas-clave" class="section-title">6 bloques de métricas críticas</h2>
+        <p class="section-lead">
+          Métricas estructuradas para lectura ejecutiva y análisis táctico, con foco en crecimiento sostenible y rentabilidad.
+        </p>
+        <div class="metrics-grid">
+          <article class="card">
+            <h3>Ingresos Netos Mensuales</h3>
+            <span class="metric-value">€4.82M</span>
+            <p>Incluye ajustes por descuentos, devoluciones y churn contable.</p>
+            <span class="metric-delta up">+18.4% vs trimestre anterior</span>
+          </article>
+          <article class="card">
+            <h3>Win Rate B2B Enterprise</h3>
+            <span class="metric-value">37.9%</span>
+            <p>Comparado por vertical, tamaño de cuenta y etapa de pipeline.</p>
+            <span class="metric-delta up">+5.2 pts interanual</span>
+          </article>
+          <article class="card">
+            <h3>CAC Recuperado</h3>
+            <span class="metric-value">7.2 meses</span>
+            <p>Tiempo medio para recuperar inversión de adquisición por cohortes.</p>
+            <span class="metric-delta down">+0.9 meses de presión</span>
+          </article>
+          <article class="card">
+            <h3>Margen por Canal</h3>
+            <span class="metric-value">43.6%</span>
+            <p>Evalúa impacto real del mix comercial sobre el beneficio bruto.</p>
+            <span class="metric-delta up">+3.1 pts con optimización</span>
+          </article>
+          <article class="card">
+            <h3>Velocidad del Pipeline</h3>
+            <span class="metric-value">26 días</span>
+            <p>Promedio desde lead calificado hasta cierre con variación semanal.</p>
+            <span class="metric-delta flat">Sin cambios relevantes</span>
+          </article>
+          <article class="card">
+            <h3>Riesgo de Churn Comercial</h3>
+            <span class="metric-value">11.3%</span>
+            <p>Probabilidad proyectada de pérdida de cuentas en próximos 90 días.</p>
+            <span class="metric-delta down">-2.4 pts tras playbooks</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="comparativas" aria-labelledby="comparativas-impacto">
+        <h2 id="comparativas-impacto" class="section-title">Comparativas de desempeño</h2>
+        <p class="section-lead">
+          Evalúa escenarios antes/después para alinear inversión comercial con evidencia de impacto real.
+        </p>
+        <div class="compare-grid">
+          <article class="card compare-card">
+            <h3>Antes de implementar analítica avanzada</h3>
+            <ul>
+              <li><strong>Reportes aislados:</strong> marketing, ventas y finanzas operaban con métricas distintas.</li>
+              <li><strong>Forecast inestable:</strong> desviaciones superiores al 24% en cierres mensuales.</li>
+              <li><strong>Decisión reactiva:</strong> acciones correctivas tardías ante caída en conversión.</li>
+              <li><strong>Costo comercial elevado:</strong> inversión creciente sin visibilidad de retorno incremental.</li>
+            </ul>
+          </article>
+          <article class="card compare-card">
+            <h3>Después de implementar la plataforma</h3>
+            <ul>
+              <li><strong>Single source of truth:</strong> equipos sincronizados con indicadores compartidos y auditables.</li>
+              <li><strong>Forecast confiable:</strong> desviación media reducida al 7.8% por modelo predictivo híbrido.</li>
+              <li><strong>Optimización continua:</strong> alertas tempranas y experimentación por segmento comercial.</li>
+              <li><strong>Rentabilidad escalable:</strong> reasignación de presupuesto hacia canales de mayor contribución.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="faq-extensa">
+        <h2 id="faq-extensa" class="section-title">FAQ extensa para equipos comerciales y de revenue</h2>
+        <p class="section-lead">
+          Respuestas prácticas para líderes que necesitan claridad técnica, impacto financiero y velocidad de implementación.
+        </p>
+        <div class="faq-grid">
+          <details>
+            <summary>¿Cuánto tarda la implementación inicial?</summary>
+            <p>El despliegue estándar tarda entre 2 y 4 semanas según fuentes de datos, calidad histórica y procesos de validación interna.</p>
+          </details>
+          <details>
+            <summary>¿Se integra con CRM y ERP existentes?</summary>
+            <p>Sí, soporta conectores para Salesforce, HubSpot, Dynamics, SAP, NetSuite y APIs personalizadas mediante sincronización segura.</p>
+          </details>
+          <details>
+            <summary>¿Qué nivel de detalle tiene el análisis por ejecutivo?</summary>
+            <p>Incluye rendimiento por etapa, tasa de avance, ciclo de cierre, ticket promedio y riesgo de fuga por cartera asignada.</p>
+          </details>
+          <details>
+            <summary>¿Puede detectar oportunidades de upsell y cross-sell?</summary>
+            <p>Sí, mediante modelos de propensión que priorizan cuentas con mayor probabilidad de expansión y mejor margen incremental.</p>
+          </details>
+          <details>
+            <summary>¿Cómo se gestiona la seguridad y la gobernanza de datos?</summary>
+            <p>Con cifrado en tránsito y reposo, roles granulares, auditoría de accesos y políticas de retención adaptadas a cumplimiento regional.</p>
+          </details>
+          <details>
+            <summary>¿La plataforma permite alertas automáticas?</summary>
+            <p>Configura alertas por variaciones en conversión, margen, churn, CAC y forecast, con envío por email, Slack o webhook.</p>
+          </details>
+          <details>
+            <summary>¿Qué tipo de comparativas históricas ofrece?</summary>
+            <p>Comparativas por cohortes, periodos equivalentes, canal, región, producto, segmento y desempeño por account executive.</p>
+          </details>
+          <details>
+            <summary>¿Sirve para equipos comerciales internacionales?</summary>
+            <p>Sí, soporta múltiples monedas, zonas horarias, impuestos locales y jerarquías comerciales regionales o globales.</p>
+          </details>
+          <details>
+            <summary>¿Cómo se demuestra el retorno en el primer trimestre?</summary>
+            <p>Se traza un baseline inicial y se miden mejoras en win rate, reducción de ciclo, eficiencia de CAC y contribución de margen.</p>
+          </details>
+          <details>
+            <summary>¿Qué soporte recibe el equipo después del lanzamiento?</summary>
+            <p>Incluye capacitación ejecutiva, sesiones de optimización mensual y acompañamiento técnico para nuevas hipótesis de crecimiento.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="cta" id="cta-final" aria-labelledby="cta-title">
+        <div class="cta-box">
+          <span class="eyebrow">Listo para escalar con precisión</span>
+          <h2 id="cta-title" class="section-title">Activa una estrategia comercial guiada por evidencia, no intuición</h2>
+          <p>
+            Solicita una demo personalizada con tu estructura de negocio y descubre en 30 minutos dónde capturar ingresos
+            adicionales, reducir fricción del funnel y elevar el margen comercial de forma sostenible.
+          </p>
+          <a class="btn btn-primary" href="#top">Quiero mi diagnóstico comercial</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>Analítica Comercial 360 · Plataforma de inteligencia para decisiones de crecimiento rentable.</footer>
+  </body>
+</html>
