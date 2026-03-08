@@ -1,0 +1,26 @@
+project_id: prj_ee2059d66197
+slug: sales-landing-batch
+name: Sales Landing Batch
+description: Landing estatica de ventas por region con hero ejecutivo, tres cards
+  regionales, una tabla corta de producto por region y un CTA final por email usando
+  datos simulados 2024.
+project_type: long_lived
+status: active
+template: static-html-starter
+app_type: static_html
+repo_root: coolify-server
+project_root: apps/sales-landing-batch
+deployment_provider: coolify
+coolify_project: ui-factory-prod
+coolify_application: sales-landing-batch
+domain: sales-landing-batch.apps.uniflexa.cloud
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T14:40:35.312711+00:00'
+updated_at: '2026-03-08T14:42:23+00:00'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: ''

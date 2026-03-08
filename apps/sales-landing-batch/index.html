@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Landing estatica con resumen ejecutivo de ventas por region, tabla de productos y CTA comercial."
+    />
+    <title>Sales Landing Batch | Ventas por region 2024</title>
+    <style>
+      :root {
+        --bg: #eff3f8;
+        --ink: #172033;
+        --muted: #5a6478;
+        --panel: rgba(255, 255, 255, 0.84);
+        --panel-border: rgba(23, 32, 51, 0.08);
+        --shadow: 0 18px 45px rgba(17, 24, 39, 0.12);
+        --brand: #153f6f;
+        --brand-strong: #0d2d4f;
+        --accent-norte: #0f5ea8;
+        --accent-centro: #db5f3f;
+        --accent-sur: #c4931f;
+        --success-bg: #e8f6ee;
+        --success-text: #1d7a4f;
+        --danger-bg: #fdeceb;
+        --danger-text: #c14d47;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(21, 63, 111, 0.16), transparent 30%),
+          radial-gradient(circle at top right, rgba(219, 95, 63, 0.16), transparent 26%),
+          linear-gradient(180deg, #f8fafc 0%, var(--bg) 55%, #e8eef5 100%);
+      }
+
+      h1, h2, h3 {
+        font-family: "Palatino Linotype", Georgia, serif;
+        letter-spacing: -0.02em;
+      }
+
+      a { color: inherit; }
+
+      .shell {
+        width: min(1080px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 3rem 0 1.5rem;
+      }
+
+      .hero-panel {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        padding: 3.5rem 2rem;
+        color: #f5f7fb;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.07), transparent 38%),
+          linear-gradient(135deg, #0d1c31 0%, #153f6f 58%, #1f5d79 100%);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel::after {
+        content: "";
+        position: absolute;
+        inset: auto -4rem -5rem auto;
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        padding: 0.4rem 0.85rem;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-size: clamp(2.3rem, 5vw, 4.25rem);
+        line-height: 0.98;
+      }
+
+      .hero-copy {
+        max-width: 38rem;
+        margin: 1rem 0 0;
+        color: rgba(245, 247, 251, 0.82);
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 1rem;
+        margin-top: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .hero-stat {
+        padding: 1rem 1.1rem;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      .hero-stat strong {
+        display: block;
+        font-size: 1.35rem;
+      }
+
+      .hero-stat span {
+        display: block;
+        margin-top: 0.2rem;
+        color: rgba(245, 247, 251, 0.72);
+        font-size: 0.9rem;
+      }
+
+      .section {
+        padding: 1.25rem 0 0;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: end;
+        margin-bottom: 1rem;
+      }
+
+      .section-head h2 {
+        margin: 0;
+        font-size: clamp(1.55rem, 3vw, 2rem);
+      }
+
+      .section-head p {
+        margin: 0;
+        max-width: 36rem;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        padding: 1.4rem;
+        border: 1px solid var(--panel-border);
+        border-radius: 22px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+      }
+
+      .card.norte { --accent: var(--accent-norte); }
+      .card.centro { --accent: var(--accent-centro); }
+      .card.sur { --accent: var(--accent-sur); }
+
+      .card .region {
+        margin: 0 0 0.55rem;
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .card h3 {
+        margin: 0;
+        font-size: 1.8rem;
+      }
+
+      .card .delta {
+        display: inline-flex;
+        margin-top: 0.75rem;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        background: var(--success-bg);
+        color: var(--success-text);
+      }
+
+      .card .delta.down {
+        background: var(--danger-bg);
+        color: var(--danger-text);
+      }
+
+      .card p {
+        margin: 0.85rem 0 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .city-list {
+        display: block;
+        margin-top: 0.7rem;
+        color: var(--ink);
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--panel-border);
+        border-radius: 24px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      table {
+        width: 100%;
+        min-width: 640px;
+        border-collapse: collapse;
+      }
+
+      thead {
+        background: #edf2f7;
+      }
+
+      th, td {
+        padding: 0.95rem 1.1rem;
+        text-align: left;
+        font-size: 0.94rem;
+      }
+
+      th {
+        color: var(--brand-strong);
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      tbody tr + tr td {
+        border-top: 1px solid rgba(23, 32, 51, 0.08);
+      }
+
+      td.num {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        padding: 0.3rem 0.65rem;
+        font-size: 0.8rem;
+        font-weight: 800;
+      }
+
+      .badge.up {
+        background: var(--success-bg);
+        color: var(--success-text);
+      }
+
+      .badge.down {
+        background: var(--danger-bg);
+        color: var(--danger-text);
+      }
+
+      .cta {
+        padding: 1.5rem 0 3.5rem;
+      }
+
+      .cta-panel {
+        padding: 2rem;
+        border-radius: 28px;
+        background: linear-gradient(135deg, #fff4de 0%, #ffffff 45%, #eef5fb 100%);
+        border: 1px solid rgba(21, 63, 111, 0.1);
+        box-shadow: var(--shadow);
+        text-align: center;
+      }
+
+      .cta-panel h2 {
+        margin: 0;
+        font-size: clamp(1.7rem, 3vw, 2.25rem);
+      }
+
+      .cta-panel p {
+        max-width: 34rem;
+        margin: 0.85rem auto 1.4rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .btn-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.95rem 1.5rem;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #fff;
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 14px 28px rgba(21, 63, 111, 0.24);
+      }
+
+      .footer {
+        padding-bottom: 2rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 720px) {
+        .hero-panel,
+        .cta-panel,
+        .card {
+          border-radius: 22px;
+        }
+
+        .hero-panel,
+        .cta-panel {
+          padding: 1.6rem;
+        }
+
+        .section-head {
+          display: block;
+        }
+
+        .section-head p {
+          margin-top: 0.45rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="hero-panel">
+          <div class="eyebrow">Batch comercial 2024</div>
+          <h1>Ventas por region con foco ejecutivo.</h1>
+          <p class="hero-copy">
+            Landing estatica con datos simulados para mostrar el ritmo comercial por zona,
+            detectar desbalances y derivar una conversacion rapida con el equipo de ventas.
+          </p>
+          <div class="hero-grid">
+            <div class="hero-stat">
+              <strong>$12.9M</strong>
+              <span>Ingresos agregados al cierre del trimestre</span>
+            </div>
+            <div class="hero-stat">
+              <strong>+8.4%</strong>
+              <span>Crecimiento promedio vs. Q3</span>
+            </div>
+            <div class="hero-stat">
+              <strong>9 ciudades</strong>
+              <span>Mercados activos en Norte, Centro y Sur</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="regions-title">
+        <div class="section-head">
+          <div>
+            <h2 id="regions-title">Panorama por region</h2>
+          </div>
+          <p>
+            Tres tarjetas concentran ingresos, variacion trimestral y foco geografico
+            para una lectura rapida del portafolio.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card norte">
+            <div class="region">Norte</div>
+            <h3>$4.2M</h3>
+            <div class="delta">▲ +12% vs Q3</div>
+            <p>
+              La zona mas agresiva en ticket medio y renovaciones corporativas.
+              <span class="city-list">Monterrey · Chihuahua · Tijuana</span>
+            </p>
+          </article>
+          <article class="card centro">
+            <div class="region">Centro</div>
+            <h3>$6.8M</h3>
+            <div class="delta">▲ +8% vs Q3</div>
+            <p>
+              Centro mantiene el mayor volumen de pipeline con expansion estable.
+              <span class="city-list">CDMX · Guadalajara · Puebla</span>
+            </p>
+          </article>
+          <article class="card sur">
+            <div class="region">Sur</div>
+            <h3>$1.9M</h3>
+            <div class="delta down">▼ -3% vs Q3</div>
+            <p>
+              Sur requiere refuerzo comercial para recuperar conversion en cuentas medias.
+              <span class="city-list">Oaxaca · Merida · Veracruz</span>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="table-title">
+        <div class="section-head">
+          <div>
+            <h2 id="table-title">Detalle por producto y region</h2>
+          </div>
+          <p>
+            Tabla corta de seis filas para mostrar volumen, ingresos y tendencia por
+            combinacion de oferta y territorio.
+          </p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Region</th>
+                <th class="num">Unidades</th>
+                <th class="num">Ingresos</th>
+                <th>Tendencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Plan Pro</td>
+                <td>Norte</td>
+                <td class="num">1 240</td>
+                <td class="num">$2 480 000</td>
+                <td><span class="badge up">▲ +15%</span></td>
+              </tr>
+              <tr>
+                <td>Plan Pro</td>
+                <td>Centro</td>
+                <td class="num">2 100</td>
+                <td class="num">$4 200 000</td>
+                <td><span class="badge up">▲ +9%</span></td>
+              </tr>
+              <tr>
+                <td>Plan Basico</td>
+                <td>Norte</td>
+                <td class="num">860</td>
+                <td class="num">$860 000</td>
+                <td><span class="badge up">▲ +5%</span></td>
+              </tr>
+              <tr>
+                <td>Plan Basico</td>
+                <td>Sur</td>
+                <td class="num">950</td>
+                <td class="num">$950 000</td>
+                <td><span class="badge down">▼ -4%</span></td>
+              </tr>
+              <tr>
+                <td>Add-ons</td>
+                <td>Centro</td>
+                <td class="num">530</td>
+                <td class="num">$636 000</td>
+                <td><span class="badge up">▲ +22%</span></td>
+              </tr>
+              <tr>
+                <td>Add-ons</td>
+                <td>Sur</td>
+                <td class="num">120</td>
+                <td class="num">$144 000</td>
+                <td><span class="badge down">▼ -8%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="cta-title">
+        <div class="cta-panel">
+          <h2 id="cta-title">Activa un analisis comercial personalizado.</h2>
+          <p>
+            El CTA cierra la pagina con una salida simple por correo para equipos que
+            quieran revisar territorio, mezcla de producto o crecimiento trimestral.
+          </p>
+          <a href="mailto:ventas@ejemplo.com" class="btn-cta">Solicitar analisis gratuito</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        sales-landing-batch.apps.uniflexa.cloud
+      </footer>
+    </main>
+  </body>
+</html>
