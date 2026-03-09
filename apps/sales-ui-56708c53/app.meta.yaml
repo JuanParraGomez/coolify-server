@@ -16,7 +16,7 @@ rag_sync_enabled: true
 rag_sync_status: in_sync
 ttl_hours: null
 created_at: '2026-03-09T01:27:14.290362+00:00'
-updated_at: '2026-03-09T01:27:15.487552+00:00'
+updated_at: '2026-03-09T01:35:16.178614+00:00'
 expires_at: null
 promoted_from: null
 created_by: hapi
