@@ -1,0 +1,29 @@
+project_id: prj_b2021c7d93e9
+slug: hapi-ui-16240fb5
+name: Stack Probe UI
+description: Proyecto demo long-lived creado por stack-probe para validar hapi fase
+  2.
+lifetime: long_lived
+status: active
+template: nextjs-starter
+app_type: nextjs
+project_root: apps/hapi-ui-16240fb5
+repo_root: coolify-server
+deployment_provider: coolify
+domain: hapi-ui-16240fb5.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: hapi-ui-16240fb5
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-08T23:30:33.552489Z'
+updated_at: '2026-03-08T23:30:35.103133Z'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: ''
+registry_path: registry/projects/hapi-ui-16240fb5.yaml
+readme_path: apps/hapi-ui-16240fb5/README.md
+app_meta_path: apps/hapi-ui-16240fb5/app.meta.yaml
+deploy_meta_path: apps/hapi-ui-16240fb5/deploy.meta.yaml

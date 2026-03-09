@@ -1,0 +1,28 @@
+project_id: prj_e6c01a551ba7
+slug: sales-ui-56708c53
+name: Sales Region UI
+description: crea una app para ver ventas por region con filtros y graficos
+lifetime: long_lived
+status: active
+template: nextjs-starter
+app_type: nextjs
+project_root: apps/sales-ui-56708c53
+repo_root: coolify-server
+deployment_provider: coolify
+domain: sales-ui-56708c53.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: sales-ui-56708c53
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-09T01:27:14.290362Z'
+updated_at: '2026-03-09T01:27:15.487552Z'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: null
+registry_path: registry/projects/sales-ui-56708c53.yaml
+readme_path: apps/sales-ui-56708c53/README.md
+app_meta_path: apps/sales-ui-56708c53/app.meta.yaml
+deploy_meta_path: apps/sales-ui-56708c53/deploy.meta.yaml

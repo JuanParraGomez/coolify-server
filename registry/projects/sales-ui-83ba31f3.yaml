@@ -16,12 +16,12 @@ rag_sync_enabled: true
 rag_sync_status: in_sync
 ttl_hours: null
 created_at: '2026-03-08T23:21:18.167553Z'
-updated_at: '2026-03-08T23:21:18.992496Z'
+updated_at: '2026-03-08T23:29:37.110060Z'
 expires_at: null
 promoted_from: null
 created_by: hapi
 managed_by: hapi
-notes: null
+notes: ''
 registry_path: registry/projects/sales-ui-83ba31f3.yaml
 readme_path: apps/sales-ui-83ba31f3/README.md
 app_meta_path: apps/sales-ui-83ba31f3/app.meta.yaml

@@ -21,7 +21,7 @@ expires_at: null
 promoted_from: null
 created_by: hapi
 managed_by: hapi
-notes: null
+notes: ''
 registry_path: registry/projects/hapi-ai-4542bc3d.yaml
 readme_path: apps/hapi-ai-4542bc3d/README.md
 app_meta_path: apps/hapi-ai-4542bc3d/app.meta.yaml

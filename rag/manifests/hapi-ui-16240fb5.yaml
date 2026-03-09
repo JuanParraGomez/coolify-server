@@ -1,0 +1,10 @@
+slug: hapi-ui-16240fb5
+source_paths:
+- apps/hapi-ui-16240fb5/README.md
+- apps/hapi-ui-16240fb5/app.meta.yaml
+- apps/hapi-ui-16240fb5/deploy.meta.yaml
+last_sync_at: '2026-03-08T23:30:35.102441Z'
+rag_sync_status: in_sync
+signature: 85ebe619ac198ccf3bcf4fe50c93762f7e29faab5db86743924ba3d295efc515
+document_id: 433e885e-8981-4475-89cb-1ac4d9dd07a0
+notes: stack-probe direct validation

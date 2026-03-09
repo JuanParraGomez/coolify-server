@@ -1,0 +1,10 @@
+slug: hapi-ui-e41ca131
+source_paths:
+- apps/hapi-ui-e41ca131/README.md
+- apps/hapi-ui-e41ca131/app.meta.yaml
+- apps/hapi-ui-e41ca131/deploy.meta.yaml
+last_sync_at: '2026-03-08T23:32:11.840381Z'
+rag_sync_status: in_sync
+signature: 5c7305899d838a25fc33878c3b91b312d53c9e27aeb756042b81d31d30195b14
+document_id: 38402cad-ca15-4e8e-aa83-cafce9c79205
+notes: stack-probe direct validation

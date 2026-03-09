@@ -1,0 +1,28 @@
+project_id: prj_970514639164
+slug: hapi-app-fd5e445c
+name: Stack Probe Sandbox
+description: Sandbox demo creada por stack-probe para validar promocion en hapi.
+lifetime: long_lived
+status: promoted
+template: static-html-starter
+app_type: static_html
+project_root: apps/hapi-app-fd5e445c
+repo_root: coolify-server
+deployment_provider: coolify
+domain: hapi-app-fd5e445c.apps.uniflexa.cloud
+coolify_project: ui-factory-prod
+coolify_application: hapi-app-fd5e445c
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-09T00:27:09.774380Z'
+updated_at: '2026-03-09T00:27:11.561698Z'
+expires_at: null
+promoted_from: sandboxes/hapi-lab-fd5e445c
+created_by: hapi
+managed_by: hapi
+notes: ''
+registry_path: registry/projects/hapi-app-fd5e445c.yaml
+readme_path: apps/hapi-app-fd5e445c/README.md
+app_meta_path: apps/hapi-app-fd5e445c/app.meta.yaml
+deploy_meta_path: apps/hapi-app-fd5e445c/deploy.meta.yaml

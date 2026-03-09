@@ -21,7 +21,7 @@ expires_at: null
 promoted_from: null
 created_by: hapi
 managed_by: hapi
-notes: null
+notes: ''
 registry_path: registry/projects/sales-ui-8c446018.yaml
 readme_path: apps/sales-ui-8c446018/README.md
 app_meta_path: apps/sales-ui-8c446018/app.meta.yaml

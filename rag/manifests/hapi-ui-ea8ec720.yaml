@@ -1,0 +1,10 @@
+slug: hapi-ui-ea8ec720
+source_paths:
+- apps/hapi-ui-ea8ec720/README.md
+- apps/hapi-ui-ea8ec720/app.meta.yaml
+- apps/hapi-ui-ea8ec720/deploy.meta.yaml
+last_sync_at: '2026-03-09T00:24:28.020371Z'
+rag_sync_status: in_sync
+signature: eb0701f9d243865bf80c0140912eee063678634e8e233df141591c587dc3a2fb
+document_id: 82fc5ce9-c688-4c9a-8af6-dc59d6b2bd53
+notes: stack-probe direct validation
