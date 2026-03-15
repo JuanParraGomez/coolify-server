@@ -7,6 +7,7 @@ landing page hola mundo - titulo grande, subtitulo, fondo gradiente, html/css pu
 - slug: `hola-mundo-test`
 - project_type: `short_lived`
 - template: `static-html-starter`
+- app_type: `dockerfile`
 - project_root: `sandboxes/hola-mundo-test`
 - deployment_provider: `coolify`
 - domain: `hola-mundo-test.sandbox.uniflexa.cloud`
