@@ -1,7 +1,0 @@
-provider: coolify
-repo: coolify-server
-base_directory: /sandboxes/sales-ui-a21d7e98-mcp
-app_type: nextjs
-autodeploy: false
-exposed: true
-environment_profile: sandbox

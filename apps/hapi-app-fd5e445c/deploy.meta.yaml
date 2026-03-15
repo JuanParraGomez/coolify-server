@@ -1,7 +1,0 @@
-provider: coolify
-repo: coolify-server
-base_directory: /apps/hapi-app-fd5e445c
-app_type: static_html
-autodeploy: true
-exposed: true
-environment_profile: production

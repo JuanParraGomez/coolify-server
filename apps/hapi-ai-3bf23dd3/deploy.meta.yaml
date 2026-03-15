@@ -1,7 +1,0 @@
-provider: coolify
-repo: coolify-server
-base_directory: /apps/hapi-ai-3bf23dd3
-app_type: nextjs
-autodeploy: true
-exposed: true
-environment_profile: production

@@ -1,7 +1,0 @@
-provider: coolify
-repo: coolify-server
-base_directory: /apps/qa-simple-ui-192215
-app_type: static_html
-autodeploy: true
-exposed: true
-environment_profile: production

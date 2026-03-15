@@ -1,7 +1,0 @@
-provider: coolify
-repo: coolify-server
-base_directory: /apps/sales-ui-a74503b6
-app_type: nextjs
-autodeploy: true
-exposed: true
-environment_profile: production
