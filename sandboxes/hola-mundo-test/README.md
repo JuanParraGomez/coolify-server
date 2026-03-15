@@ -19,3 +19,7 @@ landing page hola mundo - titulo grande, subtitulo, fondo gradiente, html/css pu
 ## Initial Scaffold
 - `Dockerfile`
 - `index.html`
+
+## Deployment
+- Coolify should use the repository subdirectory `/sandboxes/hola-mundo-test`.
+- Deployment is Dockerfile-based and serves the static page with `nginx` on port `80`.

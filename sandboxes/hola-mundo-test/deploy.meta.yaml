@@ -1,13 +1,12 @@
 provider: coolify
 repo: coolify-server
-base_directory: sandboxes/hola-mundo-test
-app_type: static_html
+base_directory: /sandboxes/hola-mundo-test
 build_pack: dockerfile
 dockerfile_path: Dockerfile
 ports_exposes: "80"
 health_check_enabled: true
 health_check_path: /
 health_check_port: "80"
-autodeploy: false
+autodeploy: true
 exposed: true
 environment_profile: sandbox
