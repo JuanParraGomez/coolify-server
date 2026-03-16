@@ -1,0 +1,26 @@
+project_id: prj_b947175c0211
+slug: metrics-dashboard-test
+name: Metrics Dashboard
+description: "Production-ready metrics dashboard with 3 key metrics (active users,\
+  \ monthly revenue, pending tickets), regional breakdown, interactive filters, and\
+  \ sortable data tables"
+project_type: long_lived
+status: active
+template: nextjs-starter
+app_type: nextjs
+repo_root: coolify-server
+project_root: apps/metrics-dashboard-test
+deployment_provider: coolify
+coolify_project: ui-factory-prod
+coolify_application: metrics-dashboard-test
+domain: metrics-dashboard-test.apps.uniflexa.cloud
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-16T16:01:34.229055+00:00'
+updated_at: '2026-03-16T17:04:15.000000+00:00'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: 'UI Integration complete on 2026-03-16. All subtasks consolidated: UI shell (navbar, layout), data layer (mock-data.ts with unified types), components (MetricCard, filters, chart, table). TypeScript: 0 errors. Build: ✓ successful.'

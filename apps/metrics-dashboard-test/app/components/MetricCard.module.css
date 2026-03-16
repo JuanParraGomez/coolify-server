@@ -1,0 +1,96 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0.25rem 0;
+  line-height: 1.2;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.25rem;
+}
+
+.trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+}
+
+.trendUp {
+  color: #059669;
+  background: #d1fae5;
+}
+
+.trendDown {
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+.trendNeutral {
+  color: #6b7280;
+  background: #f3f4f6;
+}
+
+.description {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.skeleton .value {
+  background: #f3f4f6;
+  color: transparent;
+  border-radius: 6px;
+  width: 60%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton .title {
+  background: #f3f4f6;
+  color: transparent;
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
