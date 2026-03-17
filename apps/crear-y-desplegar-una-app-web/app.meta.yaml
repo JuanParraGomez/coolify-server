@@ -1,0 +1,28 @@
+project_id: prj_eb5083e302d7
+slug: crear-y-desplegar-una-app-web
+name: Crear Y Desplegar Una App Web
+description: "Crear y desplegar una app web m\xEDnima \u201CHola Mundo\u201D para\
+  \ validar que el flujo de creaci\xF3n de apps funciona. Requisitos: una sola p\xE1\
+  gina con texto grande \u201CHola Mundo\u201D; endpoint health opcional; deploy p\xFA\
+  blico accesible; al final entregar el link/URL p\xFAblica para verla. Mantenerlo\
+  \ simple (stack por defecto del sistema) y documentar brevemente c\xF3mo redeploy/actualizar."
+project_type: long_lived
+status: active
+template: react-starter
+app_type: react
+repo_root: coolify-server
+project_root: apps/crear-y-desplegar-una-app-web
+deployment_provider: coolify
+coolify_project: ui-factory-prod
+coolify_application: crear-y-desplegar-una-app-web
+domain: crear-y-desplegar-una-app-web.apps.uniflexa.cloud
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-17T15:29:27.191104+00:00'
+updated_at: '2026-03-17T15:29:28.227249+00:00'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: ''
