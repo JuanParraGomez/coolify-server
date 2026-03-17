@@ -1,0 +1,30 @@
+project_id: prj_3d6212d6a506
+slug: plan-and-scaffold-an-ai-sales-agent
+name: Plan And Scaffold An Ai Sales Agent
+description: Plan and scaffold an AI Sales agent application that uses a browser extension
+  chat to generate leads, notifies when leads reply, crafts AI-generated responses,
+  and pre-interview research on decision makers via social data. Include a configurable
+  API key section supporting Gemini, OpenAI, Claude, or Deepseek. Provide architecture,
+  components, data flow, tech stack, and timeline in Spanish; mention default runtime
+  model openai-codex/gpt-5.1-codex-mini in response because runtime differs; include
+  steps to use LangGraph for building or orchestrating the app.
+project_type: long_lived
+status: active
+template: react-starter
+app_type: react
+repo_root: coolify-server
+project_root: apps/plan-and-scaffold-an-ai-sales-agent
+deployment_provider: coolify
+coolify_project: ui-factory-prod
+coolify_application: plan-and-scaffold-an-ai-sales-agent
+domain: plan-and-scaffold-an-ai-sales-agent.apps.uniflexa.cloud
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-03-16T18:37:29.511181+00:00'
+updated_at: '2026-03-16T19:30:00.000000+00:00'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: 'UI Integration Complete: AppShell, Dashboard, FiltersPanel, DataTable, mock-data.js (850 lines), all pages integrated. Build: ✅ 55 modules, 245KB raw, 76KB gzip. Status: Production-ready.'

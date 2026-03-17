@@ -1,0 +1,7 @@
+provider: coolify
+repo: coolify-server
+base_directory: /apps/plan-and-scaffold-an-ai-sales-agent
+app_type: react
+autodeploy: true
+exposed: true
+environment_profile: production
