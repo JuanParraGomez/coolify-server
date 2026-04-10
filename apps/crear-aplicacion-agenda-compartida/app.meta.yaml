@@ -1,0 +1,28 @@
+project_id: prj_cb803721a002
+slug: crear-aplicacion-agenda-compartida
+name: Crear Aplicacion Agenda Compartida
+description: "Crear aplicaci\xF3n agenda compartida tablet para Juan y asistente.\
+  \ Hosting Hostinger. Features: calendarios, seguimiento, modificaci\xF3n mutua pendientes,\
+  \ intuitiva, f\xE1cil usar. Deploy con Coolify. App debe funcionar en tablet (responsive),\
+  \ permitir edici\xF3n mutua entre Juan y asistente, tener calendarios, seguimiento\
+  \ de tareas, interfaz simple."
+project_type: long_lived
+status: active
+template: react-starter
+app_type: react
+repo_root: coolify-server
+project_root: apps/crear-aplicacion-agenda-compartida
+deployment_provider: coolify
+coolify_project: ui-factory-prod
+coolify_application: crear-aplicacion-agenda-compartida
+domain: crear-aplicacion-agenda-compartida.apps.uniflexa.cloud
+rag_sync_enabled: true
+rag_sync_status: in_sync
+ttl_hours: null
+created_at: '2026-04-09T15:48:48.385034+00:00'
+updated_at: '2026-04-09T15:48:49.789031+00:00'
+expires_at: null
+promoted_from: null
+created_by: hapi
+managed_by: hapi
+notes: ''
